@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escuela Halbstark | Academia de Música</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap');
+        body { font-family: 'Montserrat', sans-serif; background-color: #0f0f0f; color: #ffffff; scroll-behavior: smooth; }
+        .accent-gradient { background: linear-gradient(90deg, #ff4d4d, #f9cb28); }
+        .card-hover:hover { transform: translateY(-10px); transition: 0.3s; }
+        /* Smooth transition for mobile menu */
+        #mobile-menu { transition: max-height 0.3s ease-in-out; overflow: hidden; }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-black/90 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo & Brand -->
+                <div class="flex items-center">
+                    <img src="logo.png" alt="Halbstark" class="h-10 w-auto mr-2">
+                    <span class="text-xl font-900 tracking-tighter italic">HALBSTARK<span class="text-yellow-500">.</span></span>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 font-medium uppercase text-xs tracking-widest">
+                    <a href="#inicio" class="hover:text-yellow-500 transition">Inicio</a>
+                    <a href="#cursos" class="hover:text-yellow-500 transition">Clases</a>
+                    <a href="#video" class="hover:text-yellow-500 transition">Experiencia</a>
+                    <a href="#contacto" class="hover:text-yellow-500 transition">Contacto</a>
+                </div>
+
+                <!-- Desktop CTA -->
+                <div class="hidden md:block">
+                    <a href="#contacto" class="bg-yellow-500 text-black px-6 py-2 rounded-full font-bold hover:bg-white transition text-sm">INSCRIBIRSE</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="text-white focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Links (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-black border-b border-white/10 px-4 pt-2 pb-6 space-y-4">
+            <a href="#inicio" class="block text-gray-300 hover:text-yellow-500 font-bold uppercase tracking-widest text-sm">Inicio</a>
+            <a href="#cursos" class="block text-gray-300 hover:text-yellow-500 font-bold uppercase tracking-widest text-sm">Clases</a>
+            <a href="#video" class="block text-gray-300 hover:text-yellow-500 font-bold uppercase tracking-widest text-sm">Experiencia</a>
+            <a href="#contacto" class="block text-gray-300 hover:text-yellow-500 font-bold uppercase tracking-widest text-sm">Contacto</a>
+            <a href="#contacto" class="block bg-yellow-500 text-black text-center py-3 rounded-full font-bold">INSCRIBIRSE</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="inicio" class="min-h-screen flex items-center justify-center text-center px-6 pt-24" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80'); background-size: cover; background-position: center;">
+        <div class="max-w-4xl">
+            <!-- Hero Logo Integration -->
+            <img src="logo.png" alt="Halbstark Crest" class="h-28 md:h-44 mx-auto mb-6 drop-shadow-[0_0_15px_rgba(255,215,0,0.3)]">
+            
+            <h1 class="text-4xl md:text-8xl font-black mb-6 leading-tight uppercase">LIBERA TU <br><span class="text-yellow-500 italic">PODER MUSICAL</span></h1>
+            <p class="text-base md:text-xl text-gray-300 mb-10 max-w-2xl mx-auto font-light">En Escuela Halbstark transformamos tu pasión en talento profesional. Guitarra, Bajo, Batería, Canto y Producción.</p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#cursos" class="bg-white text-black px-8 py-4 rounded-full font-bold text-lg hover:bg-yellow-500 transition">Ver Programas</a>
+                <a href="#video" class="border-2 border-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-black transition italic">Experiencia <i class="fas fa-play ml-2 text-sm"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Programas (Responsive Grid) -->
+    <section id="cursos" class="py-20 px-6 bg-[#161616]">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-black mb-12 border-l-8 border-yellow-500 pl-6 uppercase">Nuestras Clases</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-black p-8 rounded-2xl border border-white/5 card-hover">
+                    <i class="fas fa-guitar text-4xl text-yellow-500 mb-6"></i>
+                    <h3 class="text-xl font-bold mb-4 uppercase">Instrumentos Modernos</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Guitarra eléctrica, acústica, bajo y batería con técnicas contemporáneas de interpretación.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-black p-8 rounded-2xl border border-white/5 card-hover">
+                    <i class="fas fa-microphone-alt text-4xl text-yellow-500 mb-6"></i>
+                    <h3 class="text-xl font-bold mb-4 uppercase">Entrenamiento Vocal</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Encuentra tu propia voz y domina la técnica lírica y popular con maestros certificados.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-black p-8 rounded-2xl border border-white/5 card-hover">
+                    <i class="fas fa-sliders-h text-4xl text-yellow-500 mb-6"></i>
+                    <h3 class="text-xl font-bold mb-4 uppercase">Producción & Teoría</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Compón tus propios temas y aprende el lenguaje musical para grabar como un profesional.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section id="video" class="py-20 px-6 bg-black text-center">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-2xl md:text-3xl font-bold mb-10 italic underline decoration-yellow-500 decoration-4 underline-offset-8">Vive la Experiencia Halbstark</h2>
+            <div class="aspect-video rounded-2xl overflow-hidden shadow-2xl border border-white/10">
+                <iframe class="w-full h-full" src="video-halbstark.mp4" title="Halbstark Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Subscription Section -->
+    <section class="py-16 px-6 accent-gradient">
+        <div class="max-w-4xl mx-auto text-center text-black">
+            <h2 class="text-3xl md:text-4xl font-black mb-4 uppercase leading-tight">¿Quieres una clase de prueba?</h2>
+            <p class="text-lg mb-8 font-medium italic">Suscríbete para recibir tips musicales y una beca del 10%.</p>
+            <form class="flex flex-col md:flex-row gap-3">
+                <input type="email" placeholder="Tu correo electrónico" class="flex-1 px-6 py-4 rounded-full bg-white/30 border-2 border-black/10 placeholder:text-black/60 focus:outline-none focus:bg-white transition" required>
+                <button type="submit" class="bg-black text-white px-10 py-4 rounded-full font-black hover:scale-105 transition uppercase tracking-widest text-sm">Suscribirme</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contact & Map -->
+    <section id="contacto" class="py-20 px-6 bg-[#0f0f0f]">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
+            <!-- Form -->
+            <div>
+                <h2 class="text-3xl font-black mb-8 border-b border-yellow-500 pb-2 inline-block">CONTÁCTANOS</h2>
+                <form class="space-y-5">
+                    <input type="text" placeholder="Nombre completo" class="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 focus:border-yellow-500 outline-none transition">
+                    <input type="tel" placeholder="WhatsApp" class="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 focus:border-yellow-500 outline-none transition">
+                    <textarea rows="4" placeholder="¿Qué instrumento te interesa aprender?" class="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 focus:border-yellow-500 outline-none transition"></textarea>
+                    <button class="w-full bg-yellow-500 text-black py-4 rounded-xl font-black uppercase tracking-widest hover:bg-white transition">Enviar mensaje</button>
+                </form>
+            </div>
+
+            <!-- Map -->
+            <div class="flex flex-col">
+                <h3 class="text-xl font-bold mb-4 italic text-yellow-500">Nuestra ubicación</h3>
+                <p class="text-gray-400 mb-6 text-sm italic"><i class="fas fa-map-marker-alt mr-2"></i> Encuéntranos en la sede principal del arte.</p>
+                <div class="h-64 sm:h-80 lg:h-full min-h-[300px] rounded-2xl overflow-hidden border border-white/10 grayscale hover:grayscale-0 transition duration-500">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.661042456488!2d-99.167403!3d19.427021!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDI1JzM3LjMiTiA5OcKwMTAnMDIuNyJX!5e0!3m2!1ses!2smx!4v1625000000000!5m2!1ses!2smx" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 border-t border-white/10 text-center">
+        <img src="logo.png" alt="Halbstark" class="h-12 mx-auto mb-4">
+        <div class="flex justify-center space-x-8 text-xl mb-8">
+            <a href="#" class="text-gray-500 hover:text-pink-500 transition"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-gray-500 hover:text-blue-500 transition"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="text-gray-500 hover:text-red-600 transition"><i class="fab fa-youtube"></i></a>
+        </div>
+        <p class="text-gray-600 text-xs tracking-widest uppercase italic"> MM© 2026 Escuela Halbstark - Sé tú mismo.</p>
+    </footer>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        const btn = document.getElementById('menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close menu when clicking a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+    </script>
+
+</body>
+</html>
